@@ -37,7 +37,7 @@ def predict_news(news):
     unseen_seq = torch.tensor(tokens_unseen['input_ids'])
     unseen_mask = torch.tensor(tokens_unseen['attention_mask'])
 
-    clf = joblib.load("our_model.sav")
+    clf = joblib.load("/our_model.sav")
     with torch.no_grad():
         preds = clf(unseen_seq, unseen_mask)
         preds = preds.detach().cpu().numpy()
