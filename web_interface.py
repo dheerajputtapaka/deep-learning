@@ -1,7 +1,7 @@
 import streamlit as st
 from transformers import BertTokenizerFast
 import torch
-import joblib
+from sklearn.externals import joblib
 import numpy as np
 import torch.nn as nn
 
